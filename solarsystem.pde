@@ -1,6 +1,6 @@
 
 void setup(){
-  size(1600,200);
+  size(1024,200);
   background(0,0,25);
 //  hint(ENABLE_STROKE_PURE);
   ellipseMode(CENTER);
@@ -13,7 +13,7 @@ void setup(){
 void mouseDragged(){
   // draw the celestial body
   // map the solar system to the width of the screen
-//  mercury[0] = map(mercury[2],sun[1],pluto[2],sun[1]/2, width-100);
+//  mercury[0] = map(mercury[2],sun[1],neptune[2],sun[1]/2, width-100);
 //  println(mercury[2]);
 //  println(mercury[0]);
 //  fill(255);

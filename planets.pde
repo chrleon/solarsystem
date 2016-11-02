@@ -12,12 +12,12 @@ float[] jupiter = {0, 28.353*scaleFactor, 512.2};  //xpos, radius, avg. dist fro
 float[] saturn = {0, 23.393*scaleFactor, 985.2};  //xpos, radius, avg. dist from sun
 float[] uranus = {0, 10.356*scaleFactor, 2007};  //xpos, radius, avg. dist from sun
 float[] neptune = {0, 10.094*scaleFactor, 3004.}; //xpos, radius, avg. dist from sun
-float[] pluto = {0, 0.4808*scaleFactor, 4930.5033, 2965.8341 }; //radius, farthest dist from sun, nearest dist from sun
+//float[] neptune = {0, 0.4808*scaleFactor, 4930.5033, 2965.8341 }; //radius, farthest dist from sun, nearest dist from sun
 
 void drawPlanet(String[] name, color fill, color stroke, int outline){
  // float margin = (width / 100) * 2;
  // float solarSystemStart = sun[1]/4;
- // name[0] = map(name[2],0,pluto[2],solarSystemStart, width-margin);
+ // name[0] = map(name[2],0,neptune[2],solarSystemStart, width-margin);
  // println(name[0]);
  // println("solarSystemStart: "+ solarSystemStart);
  // fill(fill);
@@ -50,7 +50,7 @@ void drawPlanets(){
   
   // draw the celestial body
   // map the solar system to the width of the screen
-  mercury[0] = map(mercury[2],0,pluto[2],solarSystemStart, width-margin);
+  mercury[0] = map(mercury[2],0,neptune[2],solarSystemStart, width-margin);
   println(mercury[0]);
  // println("solarSystemStart: "+ solarSystemStart);
   fill(85, 55, 20);
@@ -60,7 +60,7 @@ void drawPlanets(){
   
   // draw the celestial body
   // map the solar system to the width of the screen
-  venus[0] = map(venus[2],0,pluto[2],solarSystemStart, width-margin);
+  venus[0] = map(venus[2],0,neptune[2],solarSystemStart, width-margin);
   fill(211, 113, 0);
   stroke(255, 155, 0);
   strokeWeight(1);
@@ -68,7 +68,7 @@ void drawPlanets(){
   
   // draw the celestial body
   // map the solar system to the width of the screen
-  earth[0] = map(earth[2],0,pluto[2], solarSystemStart, width-margin);
+  earth[0] = map(earth[2],0,neptune[2], solarSystemStart, width-margin);
   //println(earth[0]); 
   fill(127, 208, 255);
   stroke(235, 235, 255,200);
@@ -77,7 +77,7 @@ void drawPlanets(){
   
   // draw the celestial body
   // map the solar system to the width of the screen
-  mars[0] = map(mars[2],0,pluto[2],solarSystemStart, width-margin);
+  mars[0] = map(mars[2],0,neptune[2],solarSystemStart, width-margin);
   //println(mars[0]); 
   fill(231, 133, 0);
   stroke(255, 155, 0);
@@ -86,7 +86,7 @@ void drawPlanets(){
   
   // draw the celestial body
   // map the solar system to the width of the screen
-  jupiter[0] = map(jupiter[2],0,pluto[2], solarSystemStart, width-margin);
+  jupiter[0] = map(jupiter[2],0,neptune[2], solarSystemStart, width-margin);
   //println(jupiter[0]); 
   fill(188, 136, 84);
   stroke(74, 44, 12);
@@ -95,8 +95,8 @@ void drawPlanets(){
   
   // draw the celestial body
   // map the solar system to the width of the screen
-  saturn[0] = map(saturn[2],0,pluto[2], solarSystemStart, width-margin);
-  //println(pluto[0]); 
+  saturn[0] = map(saturn[2],0,neptune[2], solarSystemStart, width-margin);
+  //println(neptune[0]); 
   fill(214, 163, 61);
   stroke(224+20, 173+20, 71+20);
   strokeWeight(2);
@@ -111,7 +111,7 @@ void drawPlanets(){
   
   // draw the celestial body
   // map the solar system to the width of the screen
-  uranus[0] = map(uranus[2],0,pluto[2], solarSystemStart, width-100);
+  uranus[0] = map(uranus[2],0,neptune[2], solarSystemStart, width-100);
   //println(uranus[0]); 
   fill(127, 208, 255);
   stroke(220,200,200);
@@ -121,20 +121,12 @@ void drawPlanets(){
   
   // draw the celestial body
   // map the solar system to the width of the screen
-  neptune[0] = map(neptune[2],0,pluto[2], solarSystemStart, width-100);
+  neptune[0] = map(neptune[2],0,neptune[2], solarSystemStart, width-100);
   //println(neptune[0]); 
   fill(100, 100, 255);
   //stroke(74, 44, 12);
   strokeWeight(0);
   ellipse(neptune[0], height/2, neptune[1], neptune[1]);  
   
-  // draw the celestial body
-   // map the solar system to the width of the screen
-  pluto[0] = map(pluto[2],sun[1],pluto[2],0, width-margin);
-  //println(pluto[0]); 
-  fill(255,255,255);
-  //stroke(74, 44, 12);
-  strokeWeight(0);
-  ellipse(pluto[0], height/2, pluto[1], pluto[1]);  
 }
 
